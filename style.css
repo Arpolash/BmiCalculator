@@ -15,7 +15,9 @@
     outline: none;
     border: none;
     margin: 10px 0;
+    padding-left: 10px;
 }
+
 @media(max-width:600px){
     .bmi-cal{
         width: 350px;
