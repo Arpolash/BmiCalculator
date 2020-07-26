@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI-Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bmi-cal">
+        <h3 class="heading mb-4">BMI CALCULATOR</h3>
+        <h6>Height</h6>
+        <input id="height-input" type="text">
+        <h6>Weight</h6>
+        <input id="weight-input" type="text">
+        <h6>Your BMI</h6>
+        <input type="text" id="totalbmi-input">
+        <br> 
+        
+        <button id="checkbtn" class="btn btn-success my-2">Check</button>
+        <h5 class="footer mt-4">GOOD BMI IS 18 TO 25</h5>
+    </div>
+    <script>
+        document.getElementById("checkbtn").addEventListener('click',function(){
+            var weightValue = document.getElementById('weight-input').value;
+            var heightValue = document.getElementById('height-input').value;
+            heightValue = heightValue * 12;
+            heightValue = heightValue * 0.025;
+            
+            var newValue = weightValue / (Math.pow(heightValue,2));
+		newValue = Math.round(newValue);
+		document.getElementById('totalbmi-input').value = newValue;
+           
+        })
+    </script>
+</body>
+</html>

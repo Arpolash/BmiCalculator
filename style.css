@@ -1,0 +1,28 @@
+*{padding: 0; margin: 0;box-sizing: border-box;}
+
+.bmi-cal{
+    width: 600px;
+    height: auto;
+    margin: 150px auto;
+    box-shadow: 10px 10px 10px gray;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(13, 128, 64);
+    color:white;
+}
+.bmi-cal input{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin: 10px 0;
+}
+@media(max-width:600px){
+    .bmi-cal{
+        width: 350px;
+    }
+}
+@media(max-width:370px){
+    .bmi-cal{
+        width: 250px;
+    }
+}
